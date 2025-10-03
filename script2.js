@@ -48,7 +48,7 @@ function getUser(userId) {
       request3.addEventListener("load", function () {
         console.log(typeof request3.responseText);
         //console.log(request.responseText);
-        //is in json string format
+        //is in json format
         //whatever I will get from the server will be in the form of a string and is in responseText property of the request object
         const data = JSON.parse(request3.responseText);
         console.log(data); // now my data will be coming in form of object and not string
