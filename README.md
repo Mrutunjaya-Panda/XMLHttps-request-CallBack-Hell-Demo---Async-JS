@@ -1,79 +1,48 @@
-# XMLHttpRequest Callback Hell Demo — Async JS ⚡
+# Async JavaScript – Promise-based Fetch Demo
 
-This project demonstrates how asynchronous operations were traditionally handled in JavaScript using **XMLHttpRequest** and **callbacks**.  
-It also highlights the challenges (often referred to as "Callback Hell") and sets the stage for the introduction of **Promises**, which provide a cleaner and more maintainable solution.
-
----
-
-## 📌 Overview
-
-- Fetches **User Card details** from the server [dummyjson.com](https://dummyjson.com) using `XMLHttpRequest`.  
-- Demonstrates **asynchronous behavior** in JavaScript.  
-- Uses **callback functions** to handle async operations.  
-- Shows how deeply nested callbacks can quickly become unreadable and error-prone.
+This branch (`promise-branch`) demonstrates how to replace **XMLHttpRequest** with the modern **Promise-based `fetch` API** to avoid **callback hell**.
 
 ---
 
-## 🗂 Project Structure
-
-XMLHttps-request-CallBack-Hell-Demo---Async-JS/
-├── index.html
-├── script.js
-└── README.md
-
-- **index.html** → Basic UI for rendering data  
-- **script2.js** → XMLHttpRequest logic with callbacks  
-- **README.md** → Documentation  
+## 🔴 Problem with XMLHttpRequest (main branch)
+- The `main` branch shows data fetching using **XMLHttpRequest**.  
+- While it works, it often leads to **nested callbacks** (callback hell).  
+- Hard to read, debug, and maintain.
 
 ---
 
-## 🚀 Running the Project
+## ✅ Solution in this Branch
+- This `promise-branch` uses the **`fetch` API** which returns a **Promise**.  
+- Advantages:
+  - Cleaner, more readable code.
+  - No deeply nested callbacks.
+  - Built-in JSON handling with `.json()`.
+  - Easier error handling with `.catch()`.
+  - Compatible with modern **async/await** syntax.
 
-1. Clone the repo:
+---
 
+## 📂 Files in This Branch
+- `index.html` → Demo page.
+- `script.js` → Promise-based `fetch` implementation.
+- `style.css` → (if present) styling.
+
+---
+
+## 🚀 How to Run
+1. Clone the repository:
    ```bash
-   git clone https://github.com/Mrutunjaya-Panda/XMLHttps-request-CallBack-Hell-Demo---Async-JS.git
-   cd XMLHttps-request-CallBack-Hell-Demo---Async-JS
-2. Open index.html in a browser.
+   git clone https://github.com/Mrutunjaya-Panda/xmlhttprequest-vs-fetch-demo.git
+   cd xmlhttprequest-vs-fetch-demo
+2. Switch to the promise-branch:
+   ```
+   git checkout promise-branch
+3. Open index.html in your browser.
 
-3. The script will make an API call to dummyjson.com
- to fetch and display User Card details.
+### 📌 Summary
 
-## ⚡ How Callbacks Help
+**This branch demonstrates how moving from callbacks to Promises makes asynchronous JavaScript code:**
 
-In JavaScript, operations like network requests are asynchronous (non-blocking).
-
-Callbacks allow us to specify what should happen after an async task (like fetching user data) is completed.
-
-Without callbacks, the code would execute synchronously, blocking the program until the request is finished.
-
-## ❌ Demerits of XMLHttpRequest + Callbacks
-
-**Callback Hell**
-
-When multiple async calls depend on each other, callbacks get nested within callbacks, making code hard to read and maintain.
-
-**Error Handling Issues**
-
-Managing errors across multiple callback levels is messy and inconsistent.
-
-**Inflexibility**
-
-XMLHttpRequest is verbose and outdated compared to modern APIs.
-
-**Readability**
-
-Code indentation grows rapidly with nested callbacks, reducing clarity.
-
-# ✅ What’s Next — Promises
-
-To overcome these issues, Promises were introduced in JavaScript (ES6).
-They provide:
-
-Cleaner syntax
-
-Better error handling
-
-Easier chaining of asynchronous operations
-
-**👉 The next part of this project will demonstrate how the same functionality can be implemented using Promises, making the code more elegant and easier to maintain.**
+# Easier to read
+# Easier to maintain
+# More future-proof, ready for async/await.
