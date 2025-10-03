@@ -24,8 +24,8 @@ This branch (`promise-branch`) demonstrates how to replace **XMLHttpRequest** wi
 
 ## 📂 Files in This Branch
 - `index.html` → Demo page.
-- `script.js` → Promise-based `fetch` implementation.
-- `style.css` → (if present) styling.
+- `promise2.js` → Promise-based `fetch` implementation.
+- `styles.css` → (if present) styling.
 
 ---
 
